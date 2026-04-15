@@ -3,7 +3,7 @@ services:
     name: hpe-rag-chatbot
     runtime: python
     plan: free
-    buildCommand: pip install -r requirements.txt && python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('all-MiniLM-L6-v2')"
+    buildCommand: pip install -r requirements.txt
     startCommand: bash start.sh
     envVars:
       - key: GOOGLE_API_KEY
